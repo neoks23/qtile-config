@@ -1,0 +1,1 @@
+This is my qtile config, feel free to use it or look at the source code

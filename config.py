@@ -88,6 +88,9 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key([mod], 'F1', lazy.spawn('ponymix toggle')),
+    Key([mod], 'F2', lazy.spawn('ponymix decrease 5')),
+    Key([mod], 'F3', lazy.spawn('ponymix increase 5')),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -185,10 +188,15 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-
+                widget.TextBox(" ", foreground="#000000"),
+                widget.Volume(
+                foreground="#000000",
+                format="{percent:2.0%}"
+                ),
                 widget.Backlight(
                 backlight_name='intel_backlight',
-                foreground='#000000'    
+                foreground='#000000',
+                format="{percent:2.0%} ﮳"    
                 ),
                 widget.TextBox("koensa1-config", name="default", foreground="#000000"),
                 widget.Systray(),

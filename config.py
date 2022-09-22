@@ -188,7 +188,8 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox(" ", foreground="#000000"),
+                widget.TextBox("koensa1-config", name="default", foreground="#000000"),
+                widget.TextBox("", foreground="#000000"),
                 widget.Volume(
                 foreground="#000000",
                 format="{percent:2.0%}"
@@ -198,14 +199,13 @@ screens = [
                 foreground='#000000',
                 format="{percent:2.0%} ﮳"    
                 ),
-                widget.TextBox("koensa1-config", name="default", foreground="#000000"),
-                widget.Systray(),
-                widget.Clock(formatmat="%Y-%m-%d %a %I:%M %p", foreground="#000000"),
                 widget.Battery(
                 foreground="#000000", 
                 battery=0,
                 format='{char} {percent:2.0%}'
                 ),
+                widget.Systray(),
+                widget.Clock(formatmat="%Y-%m-%d %a %I:%M %p", foreground="#000000"),
                 widget.QuickExit(foreground="#000000"),
             ],
             24,

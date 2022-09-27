@@ -106,6 +106,7 @@ keys = [
     Key([mod, "shift"], "a", lazy.spawn(app_man_win), desc="Launch rofi in window mode"),
     Key([mod], "a", lazy.spawn(app_man_drun), desc="Launch rofi in drun mode"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch brave browser"),
+    Key([mod], "d", lazy.spawn("discord"), desc="Launch discord lol"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
